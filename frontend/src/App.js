@@ -7,7 +7,7 @@ function App() {
   useEffect(() => {
     const load = async () => {
       try {
-        const res = await fetch("https://vercel.com/pratiks-projects-f7e04e18/reddit-reactjs-simple/NteFc3bKjFW1btjC8PXNufCmCTm9");
+        const res = await fetch("http://localhost:5000/api/reddit");
         const data = await res.json();
         setPosts(data.data.children);
       } catch (err) {
