@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const fetch = require("node-fetch"); // ⭐ IMPORTANT
 
 const app = express();
 app.use(cors());
@@ -14,8 +15,6 @@ app.get("/api/reddit", async (req, res) => {
     res.status(500).json({ error: "Failed to fetch Reddit" });
   }
 });
-
-
 
 const PORT = process.env.PORT || 5000;
 
